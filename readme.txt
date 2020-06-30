@@ -1,4 +1,4 @@
-This is a stimulus game developed for
+A stimulus activity to understand thinking capabilities among abled and differentially abled children
 
 Practice 1 - pyrp1tye.html
 Practice 2 - yiiup2hoh.html
