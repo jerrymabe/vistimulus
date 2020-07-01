@@ -1,7 +1,0 @@
-Name: fishbowl
-Time for Practice1: 00 hrs 00 mins 15 secs 52 msecs
-Time for Practice2: 00 hrs 00 mins 21 secs 85 msecs
-Time for Set1: 00 hrs 00 mins 16 secs 99 msecs
-Time for Set2: 00 hrs 00 mins 15 secs 79 msecs
-Time for Set3: 00 hrs 00 mins 20 secs 23 msecs
-Time for Set4: 00 hrs 00 mins 17 secs 74 msecs
