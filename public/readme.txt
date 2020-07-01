@@ -14,7 +14,7 @@ Login default password "letsplay", enter any username.
 
 Once Practice 1 is done,
 For Practice 2 - Click on "1" of "P1: Lets play a fun game!"
-For Set1 - Click "Insert" key on keyboard
+For Set1 - Click Q key on keyboard
 For Set 2 - Click to the immediate left of the timer
 For Set 3 - Click on "f" of "S2: Let's play a fun game!"
 For Set 4 - Click left arrow on keyboard
