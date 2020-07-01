@@ -23,7 +23,20 @@ function toNextPage(){
 			processData: false,
 			contentType: false
 		});
-		window.location = "ertginstup.html";
+		$.ajax({
+			url: "session.php",
+			data: form_data,
+			type : 'POST',
+			dataType: "json",
+			processData: false,
+			contentType: false,
+			success: function(data){
+				if(data.success)
+					window.location = "ertginstup.php";
+				else
+					alert('Error');
+			}
+		});
 	}
 	else if($('#UserName').val() == '' || $('#Password').val() != 'letsplay'){
 		$('#alert').css('display','block');

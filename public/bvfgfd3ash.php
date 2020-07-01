@@ -1,4 +1,11 @@
-<!DOCTYPE HTML>
+<?php
+session_start();
+if(!isset($_SESSION['Name']))
+{
+    header('Location: xlnogtuin.html');
+    exit();
+}
+?>
 <html>
 <head>
 <link rel="stylesheet" href="css/activitypages.css">
@@ -39,7 +46,7 @@ window.onload = function () {
 	   appendMinutes.innerHTML + " mins " + appendSeconds.innerHTML + " secs " + appendTens.innerHTML + " msecs");
 	   var form_data = new FormData();
 		var text = appendHours.innerHTML + " hrs " + appendMinutes.innerHTML + " mins " + appendSeconds.innerHTML + " secs " + appendTens.innerHTML + " msecs";
-		form_data.append("TimeP1",text);
+		form_data.append("TimeD3",text);
 		form_data.append("label", "WEBUPLOAD");
 		$.ajax({
 			url: "data.php",
@@ -48,6 +55,7 @@ window.onload = function () {
 			processData: false,
 			contentType: false
 		});
+		$('#set4').attr('disabled','disabled');
 	}
 	buttonReset.onclick = function() {
 		clearInterval(Interval);
@@ -100,12 +108,17 @@ window.onload = function () {
 		}
 	}
 }
+
+document.addEventListener('keydown', function(event) {
+    if(event.keyCode == 37) {
+        window.location = "fdsyud4zxc.php";
+    }
+});
 </script>
 </head>
-
 <header class="header navbar display-3 navbar-overlay" style="padding-bottom:20px;padding-top:15px;font-size:25px;">
 	<b><button class="button1"><span><i class="fa fa-twitter"></i><b>VISTIMULUS</b></span></button></b>
-	<center>P<a href="yiiup2hoh.html" style="color: #000000; text-decoration: none;">1</a>: Let's play a fun game! </center>
+	<center> S3: Let's play a fun game! </center>
 </header>
 <body>
 <div class="cont">
@@ -147,28 +160,28 @@ window.onload = function () {
 </div>
 </div>
 <div id="img_div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-	<img id="drag1" src="Images/Practice_trial_DP/2.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
-	<img id="drag2" src="Images/Practice_trial_DP/7.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
+	<img id="drag1" src="Images/Set_3_CP/12.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
+	<img id="drag2" src="Images/Set_3_CP/10.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
 </div>
 <div id="img_div2" ondrop="drop(event)" ondragover="allowDrop(event)">
-	<img id="drag3" src="Images/Practice_trial_DP/12.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
-	<img id="drag4" src="Images/Practice_trial_DP/5.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
+	<img id="drag3" src="Images/Set_3_CP/3.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
+	<img id="drag4" src="Images/Set_3_CP/4.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
 </div>
 <div id="img_div3" ondrop="drop(event)" ondragover="allowDrop(event)">
-	<img id="drag5" src="Images/Practice_trial_DP/8.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
-	<img id="drag6" src="Images/Practice_trial_DP/4.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
+	<img id="drag5" src="Images/Set_3_CP/7.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
+	<img id="drag6" src="Images/Set_3_CP/5.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
 </div>
 <div id="img_div4" ondrop="drop(event)" ondragover="allowDrop(event)">
-	<img id="drag7" src="Images/Practice_trial_DP/6.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
-	<img id="drag8" src="Images/Practice_trial_DP/10.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
+	<img id="drag7" src="Images/Set_3_CP/6.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
+	<img id="drag8" src="Images/Set_3_CP/8.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
 </div>
 <div id="img_div5" ondrop="drop(event)" ondragover="allowDrop(event)">
-	<img id="drag9" src="Images/Practice_trial_DP/3.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
-	<img id="drag10" src="Images/Practice_trial_DP/9.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
+	<img id="drag9" src="Images/Set_3_CP/9.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
+	<img id="drag10" src="Images/Set_3_CP/2.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
 </div>
 <div id="img_div6" ondrop="drop(event)" ondragover="allowDrop(event)">
-	<img id="drag11" src="Images/Practice_trial_DP/1.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
-	<img id="drag12" src="Images/Practice_trial_DP/11.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
+	<img id="drag11" src="Images/Set_3_CP/11.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
+	<img id="drag12" src="Images/Set_3_CP/1.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
 </div>
 <footer class="jumbotron jumbotron-fluid" style="margin-top:4.4%; padding-bottom:0px; margin-bottom:0px; height:10px;">
 <div class="setfour">

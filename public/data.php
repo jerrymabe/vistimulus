@@ -1,5 +1,5 @@
 <?php
-$myFile = "ChildData.txt";
+$myFile = "ChildStimulusData.txt";
 $fh = fopen($myFile, 'a');
 if(isset($_POST['UserName']))
 {

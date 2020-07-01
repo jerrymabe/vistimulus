@@ -1,4 +1,11 @@
-<!DOCTYPE HTML>
+<?php
+session_start();
+if(!isset($_SESSION['Name']))
+{
+    header('Location: xlnogtuin.html');
+    exit();
+}
+?>
 <html>
 <head>
 <link rel="stylesheet" href="css/activitypages.css">
@@ -39,7 +46,7 @@ window.onload = function () {
 	   appendMinutes.innerHTML + " mins " + appendSeconds.innerHTML + " secs " + appendTens.innerHTML + " msecs");
 	   var form_data = new FormData();
 		var text = appendHours.innerHTML + " hrs " + appendMinutes.innerHTML + " mins " + appendSeconds.innerHTML + " secs " + appendTens.innerHTML + " msecs";
-		form_data.append("TimeD1",text);
+		form_data.append("TimeD4",text);
 		form_data.append("label", "WEBUPLOAD");
 		$.ajax({
 			url: "data.php",
@@ -48,6 +55,7 @@ window.onload = function () {
 			processData: false,
 			contentType: false
 		});
+		$('#set4').attr('disabled','disabled');
 	}
 	buttonReset.onclick = function() {
 		clearInterval(Interval);
@@ -103,8 +111,8 @@ window.onload = function () {
 </script>
 </head>
 <header class="header navbar display-3 navbar-overlay" style="padding-bottom:20px;padding-top:15px;font-size:25px;">
-	<b><button class="button1"><span><i class="fa fa-twitter"></i><b>VISTIMULUS</b></span></button></b>
-	<center> S1: Let's play a fun game! </center>
+	<b><a href="logout.php"><button class="button1"><span><i class="fa fa-twitter"></i><b>VISTIMULUS</b></span></button></a></b>
+	<center> S4: Let's play a fun game! </center>
 </header>
 <body>
 <div class="cont">
@@ -146,35 +154,35 @@ window.onload = function () {
 </div>
 </div>
 <div id="img_div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-	<img id="drag1" src="Images/Set_1_BP/9.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
-	<img id="drag2" src="Images/Set_1_BP/2.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
+	<img id="drag1" src="Images/Set_4_DL/4.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
+	<img id="drag2" src="Images/Set_4_DL/2.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
 </div>
 <div id="img_div2" ondrop="drop(event)" ondragover="allowDrop(event)">
-	<img id="drag3" src="Images/Set_1_BP/3.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
-	<img id="drag4" src="Images/Set_1_BP/8.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
+	<img id="drag3" src="Images/Set_4_DL/3.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
+	<img id="drag4" src="Images/Set_4_DL/8.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
 </div>
 <div id="img_div3" ondrop="drop(event)" ondragover="allowDrop(event)">
-	<img id="drag5" src="Images/Set_1_BP/5.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
-	<img id="drag6" src="Images/Set_1_BP/12.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
+	<img id="drag5" src="Images/Set_4_DL/11.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
+	<img id="drag6" src="Images/Set_4_DL/6.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
 </div>
 <div id="img_div4" ondrop="drop(event)" ondragover="allowDrop(event)">
-	<img id="drag7" src="Images/Set_1_BP/7.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
-	<img id="drag8" src="Images/Set_1_BP/4.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
+	<img id="drag7" src="Images/Set_4_DL/7.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
+	<img id="drag8" src="Images/Set_4_DL/1.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
 </div>
 <div id="img_div5" ondrop="drop(event)" ondragover="allowDrop(event)">
-	<img id="drag9" src="Images/Set_1_BP/10.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
-	<img id="drag10" src="Images/Set_1_BP/1.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
+	<img id="drag9" src="Images/Set_4_DL/9.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
+	<img id="drag10" src="Images/Set_4_DL/10.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
 </div>
 <div id="img_div6" ondrop="drop(event)" ondragover="allowDrop(event)">
-	<img id="drag11" src="Images/Set_1_BP/11.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
-	<img id="drag12" src="Images/Set_1_BP/6.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
+	<img id="drag11" src="Images/Set_4_DL/5.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
+	<img id="drag12" src="Images/Set_4_DL/12.png" draggable="true" ondragstart="drag(event)" width="125" height="125">
 </div>
 <footer class="jumbotron jumbotron-fluid" style="margin-top:4.4%; padding-bottom:0px; margin-bottom:0px; height:10px;">
 <div class="setfour">
 	<button class="btn btn-primary" id="set4" onclick="clickset1()">The four boxes are set</button>
 </div>
 	<div class="stopwatch" id="d_timer">
-		<p style="margin-bottom:-2%;"><a href="uuhiid2rtfg.html" style="color: #eeeeee; text-decoration: none;">00</a><span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span><span id="tens" hidden>00</span></p>
+		<p style="margin-bottom:-2%;"><a href="logout.php" style="color: #eeeeee; text-decoration: none;">00</a><span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span><span id="tens" hidden>00</span></p>
 		<button id="button-start" style="margin-left:-10%;" hidden>start</button>
 		<button id="button-stop" hidden>stop</button>
 		<button id="button-reset" hidden>reset</button>
